@@ -1,0 +1,10 @@
+PROBLEM:
+The table may have duplicate rows (In other words, there is no primary key for this table in SQL).
+Each row of this table indicates that some viewer viewed an article (written by some author) on some date. 
+Note that equal author_id and viewer_id indicate the same person.
+Find all the authors that viewed at least one of their own articles.
+Return the result table sorted by id in ascending order.
+The result format is in the following example.
+
+CODE:
+select distinct author_id as id from views where author_id = viewer_id order by author_id;
