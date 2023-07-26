@@ -1,0 +1,8 @@
+Problem Statement:
+Write a SQL query to retrieve the productCode, productName, and buyPrice of all the products.
+Note:
+Return the result in such a way that the product with the highest buyPrice comes first.
+In case of a tie between buyPrice of two products, the productName should be sorted in ascending order lexicographically.
+
+CODE:
+select productCode,productName,buyPrice from products order by buyPrice desc, productName;
