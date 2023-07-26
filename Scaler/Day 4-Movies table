@@ -1,0 +1,7 @@
+PROBLEM:
+Suppose we have a movies table that contains some information about the movies released over the past few years.
+Write a SQL query to display the full content of that movies table.
+Table: movies
+
+CODE:
+select * from movies;
