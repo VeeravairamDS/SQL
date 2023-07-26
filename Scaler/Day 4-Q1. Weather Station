@@ -1,0 +1,7 @@
+PROBLEM:
+Problem Statement:
+Write a query to list cities and their corresponding states from the given station table.
+Here, nlatitude is the northern latitude and wlongitude is the western longitude.
+
+CODE:
+select city, state from station;
