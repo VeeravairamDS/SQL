@@ -1,0 +1,6 @@
+Problem Statement:
+Display all the movie titles in descending order of popularity. If popularity is the same, display the movies with the highest revenue first.
+Return the column 'original_title'.
+
+CODE:
+select original_title from movies order by popularity desc, revenue desc;
