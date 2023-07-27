@@ -1,0 +1,13 @@
+Problem Statement:
+Find the movie titles, taglines, and directors for the top 5 popular movies.
+Return the columns 'original_title', 'tagline', and 'director'.
+
+CODE:
+select 
+original_title,
+ tagline,
+  director
+  from 
+movies 
+order by popularity desc 
+limit 5;
