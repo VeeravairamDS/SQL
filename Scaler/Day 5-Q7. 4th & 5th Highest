@@ -1,0 +1,11 @@
+Problem Statement:
+Write a query to extract the details of the fourth and fifth highest salary employees from the employees table.
+No two employees have the same salary.
+Return the columns employee_number, first_name, last_name, and salary.
+Return the result ordered by salary in descending order.
+
+CODE:
+select distinct employee_number, first_name,last_name, salary
+from employees
+order by salary desc
+limit 2 offset 3;
