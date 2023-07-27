@@ -1,0 +1,11 @@
+Problem Statement:
+Write a query to transform and display the Full Name (first_name and last_name separated by space) of all employees where only the first letter of the Full Name is capital.
+Return the result ordered by employee_number in ascending order.
+
+CODE:
+select 
+employee_number,
+concat(concat(upper(substring(first_name,1,1)),lower(substring(first_name,2))), ' ',
+concat(lower(substring(last_name,1)))) as "Full Name"
+from employees
+order by employee_number;
