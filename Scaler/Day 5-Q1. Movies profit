@@ -1,0 +1,9 @@
+Problem Statement:
+Calculate the profit percentage using the columns 'budget' and 'revenue' and save the column as 'Profit_percentage'.
+Return the columns 'original_title' and 'Profit_percentage'
+Display all the movies and their percentage up to two decimals based on the new column created.
+
+CODE:
+select original_title,
+round(((revenue-budget)/budget)*100,2) as Profit_percentage
+from movies;
