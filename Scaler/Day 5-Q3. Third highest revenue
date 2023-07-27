@@ -1,0 +1,11 @@
+Problem Statement:
+Write a query to find all the details of the movie that has the third-highest revenue.
+Note:
+Return all the columns.
+No two movies have the same revenue. (i.e, all the values in the revenue column are unique).
+
+CODE:
+select * 
+from movies 
+order by revenue desc 
+limit 1 offset 2;
