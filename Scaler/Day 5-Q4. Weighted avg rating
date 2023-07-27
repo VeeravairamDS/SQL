@@ -1,0 +1,15 @@
+Problem Statement:
+Calculate the weighted average rating from the columns vote_count and vote_average and save the column as "Weighted_avg_rating".
+Write a query to display the top 10 movies and their rating up to two decimals based on the newly created column.
+Return the columns original_title, Weighted_avg_rating
+Return the output ordered by Weighted_avg_rating in descending order and original_title in ascending order.
+Note: Use the given formula to calculate a weighted average rating:
+(v/(v+m) * R) + (m/(m+v) * C )
+
+CODE:
+select 
+original_title,
+round((vote_count/(vote_count+104.0)*vote_average)+(104.0/(104.0+vote_count)*5.97),2) as Weighted_avg_rating
+from movies
+order by Weighted_avg_rating desc,original_title
+limit 10;
