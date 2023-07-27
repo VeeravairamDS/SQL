@@ -1,0 +1,6 @@
+Problem Statement:
+Write a query to fetch all attributes of every Japanese city in the city table. The countrycode for Japan is JPN.
+Return the result table ordered by id column in ascending order.
+
+CODE:
+select * from city where countrycode='JPN';
