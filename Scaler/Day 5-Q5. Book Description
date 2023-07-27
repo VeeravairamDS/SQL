@@ -1,0 +1,9 @@
+Problem Statement:
+Write a query to display the book description as shown below in the sample output.
+Return the result table sorted by Book_Description in ascending order.
+
+CODE:
+select 
+concat("Book Name:",book_name,",","Author:",author,",","Book price:",book_price) as Book_Description
+from books
+order by Book_Description;
