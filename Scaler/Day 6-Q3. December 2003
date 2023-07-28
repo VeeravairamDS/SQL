@@ -1,0 +1,17 @@
+Problem Statement:
+Write a query to find the orderNumber and requiredDate of the orders which are ordered in 2003 December and the status is "Shipped".
+Note:
+Use the orderDate column to check for the orders that are ordered in 2003 December.
+Return the result ordered by orderNumber in ascending order.
+
+CODE:
+select 
+orderNumber, requiredDate 
+from orders 
+where 
+(
+orderDate BETWEEN '2003-12-01' AND '2003-12-31'
+and 
+status = 'Shipped'
+) 
+order by orderNumber;
