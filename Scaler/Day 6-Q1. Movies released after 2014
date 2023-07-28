@@ -1,0 +1,7 @@
+Problem Statement:
+Write a query to display the titles of the movies that are released (i.e., release_year) after 2014 and have an average vote rating (i.e.,vote_average) greater than 7.
+Return the column 'original_title'.
+Return the result ordered by original_title in ascending order.
+
+CODE:
+select original_title from movies where (release_year > 2014 and vote_average > 7) order by original_title;
