@@ -1,0 +1,9 @@
+Problem Statement:
+Write a query to return a list of all employees with selected last names: King, Taylor, and Grant from the employee's table.
+Return all the fields.
+Return the result ordered by employee_id in ascending order.
+
+CODE:
+select * from employees
+where last_name in ('King', 'Taylor', 'Grant')
+order by employee_id;
