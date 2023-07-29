@@ -1,0 +1,7 @@
+Problem Statement:
+Write a query to find all the authors that viewed at least one of their own articles.
+Return the result table sorted by id in ascending order.
+Note: There is no primary key for this table, it may have duplicate rows. Also, note that equal author_id and viewer_id indicate the same person.
+
+CODE;
+select distinct author_id as id from views where author_id = viewer_id order by id;
