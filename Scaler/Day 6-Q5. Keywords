@@ -1,0 +1,14 @@
+Problem Statement:
+Write a query to list down all the movies along with their details that have keywords like 'sport' or 'sequel' or 'suspense'.
+Note:
+Return the columns 'original_title', 'director', 'genres', 'cast', 'budget', 'revenue', 'runtime', and 'vote_average'.
+Return the columns ordered by original_title in ascending order.
+
+CODE:
+select original_title, director, genres ,cast,budget,revenue,runtime,vote_average
+from movies
+ where 
+keywords like '%sport%' or
+keywords like'%sequel%' or
+keywords like '%suspense%'
+ order by original_title;
