@@ -1,0 +1,9 @@
+Problem Statement:
+A user is eligible for a discount if they had a purchase in the inclusive interval of time [2022-03-08, 2022-03-20] with at least minAmount = 1000.
+Write a query to report the unique user IDs of the users that are eligible for a discount.
+Return the result table ordered by user_id in ascending manner.
+
+CODE:
+select user_id from purchases
+where time_stamp between '2022-03-08 0:00:00' and '2022-03-20 11:59:59' and amount >= 1000
+order by user_id;
