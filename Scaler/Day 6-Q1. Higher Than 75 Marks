@@ -1,0 +1,7 @@
+Problem Statement:
+Write a query to show the name of any students who scored higher than 75 Marks.
+Return the result table ordered by name in ascending order. If two or more students have the same names then sort them by ascending id.
+
+CODE:
+select name from students where marks > 75 
+order by name,id;
