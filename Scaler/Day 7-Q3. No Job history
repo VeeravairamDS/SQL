@@ -1,0 +1,10 @@
+Problem Statement:
+Display all the details of the employees who did not work at any job in the past.
+Return all the columns from the employee's table.
+Return the result ordered by employee_id in ascending order.
+
+CODE:
+select *
+from employees
+WHERE employee_id NOT IN (SELECT employee_id FROM job_history)
+order by employee_id;
