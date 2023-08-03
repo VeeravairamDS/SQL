@@ -1,0 +1,13 @@
+Problem Description:
+Find the details of the employees who are working in the departments 'Administration', 'Marketing', and 'Human Resources'.
+Return the columns 'employee_id', 'full_name'(first and last name separated by space), and 'salary'.
+Return the result ordered by employee_id in ascending order.
+
+CODE:
+select 
+employee_id, 
+concat(first_name,' ',last_name) as full_name,
+salary
+from employees
+where department_id in (10,20,40)
+order by employee_id;
