@@ -1,0 +1,11 @@
+Problem Statement:
+Write a query to retrieve each employee's employee number, name, phone, and email in the employee's table, but if an employee does not have an email or phone, we want to display the text "N/A" instead.
+Return the result ordered by employeeNumber in ascending order.
+
+CODE:
+SELECT 
+employeeNumber, firstName, lastName, 
+IFNULL(email, 'N/A') AS email, 
+IFNULL(phone, 'N/A') AS phone
+from employees
+order by employeeNumber;
