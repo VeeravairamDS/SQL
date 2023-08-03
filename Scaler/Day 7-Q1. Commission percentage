@@ -1,0 +1,15 @@
+Problem Statement:
+Write a query to replace the commission_pct with 0 if the commission_pct value is null, else return the value.
+Round the commission_pct up to two decimal places.
+Return the result ordered by employee_id in ascending order.
+
+CODE:
+select 
+employee_id,
+CASE
+    WHEN commission_pct IS NULL THEN '0'
+    ELSE commission_pct
+END as commission_pct
+
+FROM employees
+order by employee_id;
