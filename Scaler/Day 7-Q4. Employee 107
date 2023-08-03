@@ -1,0 +1,13 @@
+Problem Statement:
+Write a query to find the details of the other employees who work in the same job as the employee with employee_id as 107.
+Note:
+Create a new column "full_name" by concatenating the first_name and last_name columns, separated by space.
+Return the columns 'full_name', 'salary', 'department_id', and 'job_id'.
+Return the output ordered by full_name in ascending order.
+
+CODE:
+select 
+concat(first_name,' ',last_name) as full_name, salary, department_id, job_id
+from employees
+where job_id in (select job_id from employees where employee_id = '107')
+order by full_name;
