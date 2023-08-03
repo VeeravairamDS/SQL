@@ -1,0 +1,12 @@
+Problem Statement:
+Write a SQL query to report whether each triad of the three line segments in the given data can form a triangle or not.
+Note: Return the result table ordered by x, y and z in ascending order.
+
+CODE:
+select x,y,z,
+case
+when ((x+y>z) and (x+z>y) and (z+y>x)) then 'Yes'
+else 'No'
+end as triangle
+from triangle
+order by x,y,z;
