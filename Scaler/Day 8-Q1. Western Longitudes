@@ -1,0 +1,9 @@
+Problem Statement:
+Write a query to get the sum of Western Longitudes (long_w) from station table having values greater than 38.7880 and less than 137.2345.
+Round off your answer to 4 decimal places.
+
+CODE:
+select 
+round(sum(long_w),4) as sum
+from station
+where long_w >= 38.7880 and long_w <= 137.2345;
