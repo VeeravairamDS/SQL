@@ -1,0 +1,12 @@
+Problem Statement:
+We define an employee's total earnings to be their monthly (salary×months) worked, and the maximum total earnings to be the maximum total earnings for any employee in the employee table.
+Write a query to find the maximum total earnings (earnings) for all employees as well as the total number of employees (num_employees) who have maximum total earnings.
+
+CODE:
+select 
+(months * salary ) as earnings,
+count(*) AS num_employees
+from employee
+group by earnings
+order by earnings desc
+limit 1;
