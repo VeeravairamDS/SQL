@@ -1,0 +1,10 @@
+Problem Statement:
+Write a query to get the details of the average salary of the employees for each department.
+Save the new column as 'avg_employee_salary'
+Return the result order by avg_employee_salary in descending order and department_id in ascending order.
+
+  CODE:
+  SELECT department_id, AVG(salary) AS avg_employee_salary
+FROM employees
+GROUP BY department_id
+ORDER BY avg_employee_salary DESC, department_id;
