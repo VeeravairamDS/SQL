@@ -1,0 +1,7 @@
+Problem Statement:
+Write a SQL query to report the number of unique customers who had at least one bill with an amount strictly greater than 500.
+
+CODE:
+SELECT COUNT(DISTINCT customer_id) AS rich_count
+FROM store
+WHERE amount > 500;
