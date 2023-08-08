@@ -1,0 +1,12 @@
+Problem Statement:
+Write a SQL query to find all the details of those employees who earn the third-highest salary.
+Return all the columns from the employees table.
+Follow-Up: Avoid using LIMIT keyword in the query.
+
+CODE:
+select *
+from employees
+WHERE salary IN (SELECT max(salary) FROM employees 
+WHERE salary < (SELECT max(salary) FROM employees 
+WHERE salary < (SELECT max(salary) FROM employees)));
+
