@@ -1,0 +1,13 @@
+Problem Statement:
+Write a query to retrieve the lowest salary and the highest salary for each job in the employee's table.
+Save the newly created columns as 'lowestsalary' and 'highestsalary'
+Return the result order by the job_id in ascending order.
+
+CODE:
+select 
+job_id,
+min(salary) as lowestsalary,
+max(salary) as highestsalary
+from employees
+group by (job_id)
+order by job_id;
