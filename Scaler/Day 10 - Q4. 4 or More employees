@@ -1,0 +1,12 @@
+Problem Statement:
+Write a query to display the "full_name" (first name and last name separated by space) of a manager who manages 4 or more employees.
+Note:
+Return the result ordered by full_name in ascending order.
+The column manager_id in the employees table represents the employee_id of the manager.
+
+CODE:
+select
+concat (first_name,' ', last_name) as full_name
+from employees
+WHERE employee_id IN (SELECT manager_id FROM employees GROUP BY manager_id HAVING COUNT(*) >= 4)
+order by full_name;
