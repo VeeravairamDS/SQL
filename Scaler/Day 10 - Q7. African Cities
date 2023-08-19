@@ -1,0 +1,9 @@
+Problem Statement:
+Given the city and country tables, query the names of all cities where the continent is 'Africa'.
+Return the result table ordered by the city name in ascending order.
+
+CODE:
+SELECT city.name
+FROM country INNER JOIN city ON country.code = city.countryCode
+WHERE country.continent = 'Africa'
+ORDER BY city.name;
