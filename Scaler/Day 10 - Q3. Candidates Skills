@@ -1,0 +1,12 @@
+Problem Description:
+Given a list of candidates and their skills, you're asked to find the candidates best suited for an open Data Science job. We want to find candidates who are proficient in 'Python', 'Tableau', and 'MySQL'.
+Write a query to list the candidates who possess all three required skills for the job.
+Note: There are no duplicates in the candidates table.
+Return the result ordered by candidate_id in ascending order.
+
+CODE:
+select candidate_id
+from candidates
+where skill in ('Python','Tableau','MySQL')
+group by (candidate_id) having count(skill) = '3'
+order by candidate_id;
