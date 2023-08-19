@@ -1,0 +1,10 @@
+Problem Statement:
+Write a SQL query that reports the product_name, year, and price for each sale_id in the sales table.
+Return the result table ordered by year and product_name in ascending order.
+
+CODE:
+select b.product_name, a.year, a.price
+from sales as a
+inner join product as b
+ON a.product_id = b.product_id
+order by year, product_name;
